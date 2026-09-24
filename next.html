@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solaris Travel — Verified</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#fdfbf7;--paper:#fff;--ink:#0f1e3d;--muted:#7a8699;--line:#e8e3d8;--orange:#ff8c42;}
+  html,body{height:100%;margin:0;}
+  body{font-family:'Manrope',sans-serif;background:var(--bg);color:var(--ink);display:flex;align-items:center;justify-content:center;min-height:100vh;letter-spacing:-0.005em;}
+  .card{text-align:center;padding:60px 48px;max-width:460px;width:92%;background:var(--paper);border-radius:28px;box-shadow:0 30px 70px rgba(15,30,61,0.10);}
+  .ring{width:100px;height:100px;margin:0 auto 28px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ffd4a8,#ff8c42 60%,#e5742e 100%);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 16px 40px rgba(255,140,66,0.35);animation:pop .6s cubic-bezier(0.2,0.9,0.3,1.2);}
+  .ring svg{width:48px;height:48px;}
+  @keyframes pop{0%{transform:scale(.4);opacity:0;}65%{transform:scale(1.08);}100%{transform:scale(1);opacity:1;}}
+  h2{font-family:'DM Serif Display',serif;font-size:42px;letter-spacing:-0.02em;margin:0 0 14px;}
+  h2 em{font-style:italic;color:var(--orange);}
+  p{font-size:15.5px;color:var(--muted);line-height:1.65;margin:0;}
+  .stamp{margin-top:32px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:center;gap:24px;font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--orange);}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="ring">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <h2>Trip <em>confirmed</em>.</h2>
+    <p>Your booking is secured. Taking you to the sunshine…</p>
+    <div class="stamp"><span>Secure</span><span>Verified</span><span>Ready</span></div>
+  </div>
+  <script>
+    setTimeout(function(){
+      var d=new URLSearchParams(location.search).get("to");
+      location.href=d||"https://www.google.com";
+    },1800);
+  </script>
+</body>
+</html>
